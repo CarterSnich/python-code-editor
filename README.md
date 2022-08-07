@@ -4,7 +4,7 @@
 
 You can edit these files
 
-- `index.php` - the pag, obviously
+- `index.php` - the page, obviously
 - `runner.php` - accepts request, executes helper script, and returns command output
 - `main.py` - output file of the code
 - `runner.py` - helper script to run and handle command outputs, the actual file that executes the code
