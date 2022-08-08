@@ -1,19 +1,12 @@
-# Python web compiler
+# Python web compiler/editor/whatnot
 
 ## Files
 
-You can edit these files
-
 - `index.php` - the page, obviously
-- `runner.php` - accepts request, executes helper script, and returns command output
-- `main.py` - output file of the code
-- `runner.py` - helper script to run and handle command outputs, the actual file that executes the code
-
-**DO NOT TOUCH THESE FILES**
-
-- `codejar.js` - code editor module
-- `highlight.min.js` - code highlighter module
-- `dracula.css` - code highlighter theme styling
+- `runner.php` - accepts request, and executes helper script, and returns command output
+- `main.py` - output file of the code. this is in `.gitignore` but is generated once you run a code
+- `runner.py` - helper script to run and handle command outputs. the actual file that executes the code
+- `assets/*` - libraries/dependencies folder
 
 ## How to setup
 

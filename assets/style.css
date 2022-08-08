@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+main {
+	width: calc(100vw - 5rem);
+	height: calc(100vh - 5rem);
+	display: grid;
+	grid-template-columns: 50% 50%;
+	gap: 1.25rem;
+}
+
+pre {
+	margin: 0;
+}
+
+#editor-wrapper,
+#editor-wrapper > pre,
+#editor-wrapper > pre > code {
+	height: 100%;
+}
+
+#output-wrapper {
+	display: flex;
+	flex-flow: column;
+	gap: 1.25rem;
+}
+
+pre#stdout,
+pre#stderr {
+	background-color: black;
+	padding: 1.25rem;
+	overflow: auto;
+}
+
+pre#stdout {
+	color: #00ff00;
+}
+
+pre#stderr {
+	color: #ff0000;
+}
+
+#run-button {
+	position: absolute;
+	right: 1.25rem;
+	top: 0.75rem;
+	font-size: medium;
+}

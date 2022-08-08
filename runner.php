@@ -14,6 +14,4 @@ $command = 'python runner.py';
 $output = shell_exec($command);
 
 // return output
-echo json_encode([
-    'output' => $output
-]);
+echo json_encode($output);

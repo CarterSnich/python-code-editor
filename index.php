@@ -5,64 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="darcula.css">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        main {
-            width: calc(100vw - 5rem);
-            height: calc(100vh - 5rem);
-            display: grid;
-            grid-template-columns: 50% 50%;
-            gap: 1.25rem
-        }
-
-        pre {
-            margin: 0;
-        }
-
-        #editor-wrapper,
-        #editor-wrapper>pre,
-        #editor-wrapper>pre>code {
-            height: 100%;
-        }
-
-        #output-wrapper {
-            display: flex;
-            flex-flow: column;
-            gap: 1.25rem;
-        }
-
-
-
-        pre#stdout {
-            color: #00ff00;
-            background-color: black;
-            padding: 1.25rem;
-        }
-
-        pre#stderr {
-            color: #ff0000;
-            background-color: black;
-            padding: 1.25rem;
-        }
-
-        #run-button {
-            position: absolute;
-            right: 1.25rem;
-            top: .75rem;
-            font-size: medium;
-        }
-    </style>
+    <title>Python web compiler/editor/whatnot</title>
+    <link rel="stylesheet" href="./assets/darcula.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 
@@ -85,11 +30,11 @@
 
     <button id="run-button">Run</button>
 
-    <script src="highlight.min.js"></script>
+    <script src="./assets/highlight.min.js"></script>
     <script type="module">
         import {
             CodeJar
-        } from './codejar.js';
+        } from './assets/codejar.js';
 
         (function() {
             let jar = CodeJar(document.querySelector('#editor'), hljs.highlightAll, {
@@ -111,7 +56,7 @@
                     })
                     .then(res => res.json())
                     .then(res => {
-                        let output = JSON.parse(res.output)
+                        let output = JSON.parse(res)
                         document.querySelector('pre#stdout').innerText = output['stdout']
                         document.querySelector('pre#stderr').innerText = output['stderr']
                     })
